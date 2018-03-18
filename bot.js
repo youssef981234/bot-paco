@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 
-client.login('NDA5NDY2MzgxNDUzNzU0Mzc4.DVkZMQ.rDmIULQnu06JRviulmqClR_aAjU');
+client.login(process.env.BOT_TOKEN);
 
 client.on('message', message => {
   // Voice only works in guilds, if the message does not come from a guild,
