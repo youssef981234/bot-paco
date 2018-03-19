@@ -148,4 +148,37 @@ client.on('message', message => {
 	}).catch(err => console.log(err));
 	
   }
+	if (message.content === '/gay'){
+	message.member.voiceChannel.join().then(connection => {
+		console.log('playing');
+		const dispatcher = connection.playFile('./sounds/what-are-you-fucking-gay.mp3', {volume: '1'});
+		dispatcher.on('end', () => {
+				message.member.voiceChannel.leave();	// The song has finished
+		});
+
+	}).catch(err => console.log(err));
+	
+  }
+	if (message.content === '/drama'){
+	message.member.voiceChannel.join().then(connection => {
+		console.log('playing');
+		const dispatcher = connection.playFile('./sounds/drama.swf.mp3', {volume: '1'});
+		dispatcher.on('end', () => {
+				message.member.voiceChannel.leave();	// The song has finished
+		});
+
+	}).catch(err => console.log(err));
+	
+  }
+	if (message.content === '/hey'){
+	message.member.voiceChannel.join().then(connection => {
+		console.log('playing');
+		const dispatcher = connection.playFile('./sounds/hey-thats-pretty-good.mp3', {volume: '1'});
+		dispatcher.on('end', () => {
+				message.member.voiceChannel.leave();	// The song has finished
+		});
+
+	}).catch(err => console.log(err));
+	
+  }
 });
