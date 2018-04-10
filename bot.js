@@ -5,7 +5,7 @@ const client = new Discord.Client();
 client.login(process.env.BOT_TOKEN);
 
 client.on('ready', () => {
-  bot.user.setGame('Insulting Sonja')
+  client.user.setGame('Insulting Sonja')
 })
 
 client.on('message', message => {
