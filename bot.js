@@ -181,7 +181,7 @@ client.on('message', message => {
 	}).catch(err => console.log(err));
 	
   }
-	if (message.content === '/vjesta'){
+	if (message.content === '/martica'){
 	message.member.voiceChannel.join().then(connection => {
 		console.log('playing');
 		const dispatcher = connection.playFile('./sounds/marta.mp3', {volume: '1'});
