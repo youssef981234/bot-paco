@@ -4,6 +4,10 @@ const client = new Discord.Client();
 
 client.login(process.env.BOT_TOKEN);
 
+client.on('ready', () => {
+  bot.user.setGame('Insulting Sonja')
+})
+
 client.on('message', message => {
   // Voice only works in guilds, if the message does not come from a guild,
   // we ignore it
