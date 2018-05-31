@@ -196,7 +196,7 @@ client.on('message', message => {
 	}).catch(err => console.log(err));
 	
   }
-	if (message.content === '/martica'){
+	if (message.content === '/gj'){
 	message.member.voiceChannel.join().then(connection => {
 		console.log('playing');
 		const dispatcher = connection.playFile('./sounds/Great Job Pooping!.mp3', {volume: '1'});
