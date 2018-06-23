@@ -207,4 +207,15 @@ client.on('message', message => {
 	}).catch(err => console.log(err));
 	
   }
+	if (message.content === '/pewds'){
+	message.member.voiceChannel.join().then(connection => {
+		console.log('playing');
+		const dispatcher = connection.playFile('./sounds/1516998450144.mp3', {volume: '1'});
+		dispatcher.on('end', () => {
+				message.member.voiceChannel.leave();	// The song has finished
+		});
+
+	}).catch(err => console.log(err));
+	
+  }
 });
