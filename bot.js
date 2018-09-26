@@ -218,4 +218,15 @@ client.on('message', message => {
 	}).catch(err => console.log(err));
 	
   }
+	if (message.content === '/bodko'){
+	message.member.voiceChannel.join().then(connection => {
+		console.log('playing');
+		const dispatcher = connection.playFile('./sounds/bodkoispadi.mp3', {volume: '1'});
+		dispatcher.on('end', () => {
+				message.member.voiceChannel.leave();	// The song has finished
+		});
+
+	}).catch(err => console.log(err));
+	
+  }
 });
